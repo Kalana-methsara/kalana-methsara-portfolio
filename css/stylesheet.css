@@ -256,27 +256,37 @@ body {
 }
 
 .floating-element:nth-child(1) {
-  top: 10%;
-  left: 15%;
+  top: 35%;
+  left: -13%;
   animation: floatElement 15s ease-in-out infinite;
 }
 
 .floating-element:nth-child(2) {
-  top: 70%;
-  left: 10%;
+  top: 100%;
+  left: 0%;
   animation: floatElement 12s ease-in-out infinite 1s;
 }
 
 .floating-element:nth-child(3) {
-  top: 30%;
-  right: 15%;
+  top: 10%;
+  right: -10%;
   animation: floatElement 18s ease-in-out infinite 2s;
 }
 
 .floating-element:nth-child(4) {
-  top: 80%;
-  right: 20%;
+  top: 123%;
+  right: 35%;
   animation: floatElement 14s ease-in-out infinite 3s;
+}
+.floating-element:nth-child(5) {
+  top: 75%;
+  left: 115%;
+  animation: floatElement 16s ease-in-out infinite 4s;
+}
+.floating-element:nth-child(6) {
+  top: -15%;
+  right: 60%;
+  animation: floatElement 13s ease-in-out infinite 5s;
 }
 
 @keyframes float {
