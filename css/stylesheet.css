@@ -36,7 +36,7 @@ body {
   text-decoration: none;
   font-weight: 500;
   margin-left: 35px;
-  transition: -3s;
+  transition: 0.3s;
   opacity: 0;
   animation: slideTop 0.5s ease forwards;
   animation-delay: calc(0.2s * var(--i));
@@ -51,11 +51,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background: url("../assets/my.jpeg") no-repeat; */
   background-color: #081c29;
   background-size: cover;
   background-position: center;
   padding: 70px 10% 0;
+  overflow: hidden;
 }
 .home .content {
   max-width: 600px;
@@ -104,7 +104,7 @@ body {
   color: #0ef;
   font-size: 20px;
   text-decoration: none;
-  transition: -5s ease;
+  transition: 0.5s ease;
   opacity: 0;
   animation: slideLeft 1s ease forwards;
   animation-delay: calc(0.2s * var(--i));
@@ -172,5 +172,232 @@ body {
   0% {
     opacity: 0;
     transform: translateY(-100px);
+  }
+}
+
+.image-container {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: zoomIn 1s ease forwards;
+  animation-delay: 1.5s;
+}
+
+.hexagon-wrapper {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.hexagon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.hexagon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(1.1) contrast(1.1);
+  transition: transform 0.5s ease;
+}
+
+.hexagon:hover img {
+  transform: scale(1.05);
+}
+
+.hexagon-border {
+  position: absolute;
+  width: 105%;
+  height: 105%;
+  background: linear-gradient(45deg, #0ef, #ff4da6, #0ef);
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+  z-index: 1;
+  animation: rotate 8s linear infinite;
+}
+
+.hexagon-glow {
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  background: #0ef;
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+  filter: blur(20px);
+  opacity: 0.5;
+  z-index: 0;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.floating-elements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.floating-element {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #0ef;
+  border-radius: 50%;
+  filter: blur(2px);
+  opacity: 0.7;
+}
+
+.floating-element:nth-child(1) {
+  top: 10%;
+  left: 15%;
+  animation: floatElement 15s ease-in-out infinite;
+}
+
+.floating-element:nth-child(2) {
+  top: 70%;
+  left: 10%;
+  animation: floatElement 12s ease-in-out infinite 1s;
+}
+
+.floating-element:nth-child(3) {
+  top: 30%;
+  right: 15%;
+  animation: floatElement 18s ease-in-out infinite 2s;
+}
+
+.floating-element:nth-child(4) {
+  top: 80%;
+  right: 20%;
+  animation: floatElement 14s ease-in-out infinite 3s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes floatElement {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(10px, -15px);
+  }
+  50% {
+    transform: translate(-5px, 10px);
+  }
+  75% {
+    transform: translate(15px, 5px);
+  }
+}
+
+@media (max-width: 1200px) {
+  .image-container {
+    width: 500px;
+    height: 500px;
+  }
+
+  .hexagon-wrapper {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 992px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 120px;
+  }
+
+  .home .content {
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .image-container {
+    width: 400px;
+    height: 400px;
+  }
+
+  .hexagon-wrapper {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 50px;
+  }
+
+  .navbar a {
+    font-size: 18px;
+    margin-left: 20px;
+  }
+
+  .home-content h1 {
+    font-size: 40px;
+  }
+
+  .home-content h3 {
+    font-size: 24px;
+  }
+
+  .image-container {
+    width: 350px;
+    height: 350px;
+  }
+
+  .hexagon-wrapper {
+    width: 300px;
+    height: 300px;
   }
 }
