@@ -27,24 +27,20 @@ body {
   height: 100px;
   width: 100px;
   object-fit: cover;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
 }
 #logo-content h1 {
   margin: 0;
   color: #0ef;
+  opacity: 0;
+  animation: slideBottom 0.5s ease forwards;
 }
 #logo-content h3 {
   margin: 0;
   color: #fff;
-}
-.logo {
-  position: relative;
-  font-size: 25px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  cursor: default;
   opacity: 0;
-  animation: slideRight 1s ease forwards;
+  animation: slideTop 0.5s ease forwards;
 }
 .navbar a {
   display: inline-block;
