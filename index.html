@@ -28,7 +28,7 @@
         <a href="#contact" style="--i: 5">Contact</a>
       </nav>
     </header>
-    <section class="home">
+    <section class="home" id="home">
       <div class="home-content">
         <h3>Hello, It's Me</h3>
         <h1>Kalana Methsara</h1>
@@ -58,20 +58,17 @@
           <div class="hexagon">
             <img src="/assets/profileImage.jpeg" alt="Profile Image" />
           </div>
-          <div class="floating-elements">
-            <div class="floating-element"></div>
-            <div class="floating-element"></div>
-            <div class="floating-element"></div>
-            <div class="floating-element"></div>
-            <div class="floating-element"></div>
-            <div class="floating-element"></div>
-          </div>
         </div>
       </div>
     </section>
     <section class="about" id="about">
-      <div class="about-img">
-        <img src="/assets/aboutImg.jpeg" alt="About Image" />
+      <div class="image-container">
+        <div class="hexagon-wrapper">
+          <div class="hexagon-border-stop"></div>
+          <div class="hexagon">
+            <img src="/assets/aboutImg.jpeg" alt="About Image" />
+          </div>
+        </div>
       </div>
       <div class="about-text">
         <h2>About <samp id="about-me">Me</samp></h2>
@@ -86,6 +83,160 @@
           clients to ensure their vision is realized in every project.
         </p>
         <a href="#" class="btn-box">Download CV</a>
+      </div>
+    </section>
+    <section class="services" id="services">
+      <div class="services-container">
+        <h2 class="sub-title">My <samp>Services</samp></h2>
+        <div class="services-list">
+          <div style="--i: 7">
+            <i class="bx bx-code" style="color: #00eeff"></i>
+            <h2>UI/UX Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum
+              enim, provident animi voluptatum tempore assumenda accusamus
+              dolore nam nostrum explicabo tempora non dolorem eveniet
+              perspiciatis at, delectus iure et dignissimos.
+            </p>
+            <a href="#" class="read">Learn More</a>
+          </div>
+          <div style="--i: 8">
+            <i class="bx bx-crop" style="color: #00eeff"></i>
+            <h2>Web Development</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum
+              enim, provident animi voluptatum tempore assumenda accusamus
+              dolore nam nostrum explicabo tempora non dolorem eveniet
+              perspiciatis at, delectus iure et dignissimos.
+            </p>
+            <a href="#" class="read">Learn More</a>
+          </div>
+          <div style="--i: 9">
+            <i class="bx bxl-apple" style="color: #00eeff"></i>
+            <h2>App Development</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum
+              enim, provident animi voluptatum tempore assumenda accusamus
+              dolore nam nostrum explicabo tempora non dolorem eveniet
+              perspiciatis at, delectus iure et dignissimos.
+            </p>
+            <a href="#" class="read">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <h2 id="sub-title">My <samp>Skills</samp></h2>
+    <section class="skills" id="skills">
+      <div class="skills-container">
+        <h1 class="skills-title">Technical Skills</h1>
+        <div class="technical-bars">
+          <div class="bar">
+            <div class="info">
+              <i style="color: #c95d2e" class="bx bxl-html5"></i>
+              <span>HTML</span>
+            </div>
+            <div class="progress-line html">
+              <span data-percent="90%"></span>
+            </div>
+          </div>
+          <div class="bar">
+            <div class="info">
+              <i style="color: #147bbc" class="bx bxl-css3"></i>
+              <span>CSS</span>
+            </div>
+            <div class="progress-line css">
+              <span data-percent="60%"></span>
+            </div>
+          </div>
+          <div class="bar">
+            <div class="info">
+              <i style="color: #b0bc1e" class="bx bxl-javascript"></i>
+              <span>JavaScript</span>
+            </div>
+            <div class="progress-line javascript">
+              <span data-percent="85%"></span>
+            </div>
+          </div>
+          <div class="bar">
+            <div class="info">
+              <i style="color: #c32ec9" class="bx bxl-python"></i>
+              <span>Python</span>
+            </div>
+            <div class="progress-line python">
+              <span data-percent="50%"></span>
+            </div>
+          </div>
+          <div class="bar">
+            <div class="info">
+              <i style="color: #69bcbc" class="bx bxl-react"></i>
+              <span>React</span>
+            </div>
+            <div class="progress-line react">
+              <span data-percent="70%"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="skills-container">
+        <h1 class="skills-title">Professional Skills</h1>
+        <div class="radial-bars">
+          <div class="bar">
+            <svg x="0px" y="0px" viewBox="0 0 200 200">
+              <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+              <circle
+                class="path path-1"
+                cx="100"
+                cy="100"
+                r="80"
+                style="--target: 50"
+              ></circle>
+            </svg>
+            <div class="percentage">90%</div>
+            <div class="text">Creativity</div>
+          </div>
+          <div class="bar">
+            <svg x="0px" y="0px" viewBox="0 0 200 200">
+              <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+              <circle
+                class="path path-2"
+                cx="100"
+                cy="100"
+                r="80"
+                style="--target: 175"
+              ></circle>
+            </svg>
+            <div class="percentage">65%</div>
+            <div class="text">Communication</div>
+          </div>
+          <div class="bar">
+            <svg x="0px" y="0px" viewBox="0 0 200 200">
+              <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+              <circle
+                class="path path-3"
+                cx="100"
+                cy="100"
+                r="80"
+                style="--target: 125"
+              ></circle>
+            </svg>
+            <div class="percentage">75%</div>
+            <div class="text">Problem Solving</div>
+          </div>
+          <div class="bar">
+            <svg x="0px" y="0px" viewBox="0 0 200 200">
+              <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+              <circle
+                class="path path-4"
+                cx="100"
+                cy="100"
+                r="80"
+                style="--target: 100"
+              ></circle>
+            </svg>
+            <div class="percentage">80%</div>
+            <div class="text">Teamwork</div>
+          </div>
+        </div>
       </div>
     </section>
     <script src="/js/main.js"></script>
