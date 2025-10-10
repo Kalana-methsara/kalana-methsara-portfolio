@@ -26,3 +26,16 @@ var typed = new Typed(".text", {
       header.classList.remove("scrolled");
     }
   });
+
+  window.addEventListener("scroll", function () {
+  const backToTop = document.getElementById("backToTop");
+  if (window.scrollY > 200) {
+    backToTop.classList.add("scrolled");
+  } else {
+    backToTop.classList.remove("scrolled");
+  }
+});
+
+document.getElementById("backToTop").addEventListener("click", function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
